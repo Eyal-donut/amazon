@@ -2,3 +2,16 @@
     font-family: 'amazon-ember';
     src: url(/assets/amazon-ember-cufonfonts/Amazon\ Ember\ Cd\ RC.otf);
 }
+
+h5 {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+h6 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    line-height: 4.8rem;
+    font-weight: 700;
+}
