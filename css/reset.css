@@ -1,0 +1,24 @@
+:root {
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+
+html, body {
+    font-family: amazon-ember, sans-serif;
+    text-align: center;
+    /* height: 100vh; */
+    width: 100vw;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+ul {    list-style: none;
+}
