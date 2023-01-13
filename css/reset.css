@@ -1,10 +1,11 @@
 :root {
     font-size: 62.5%;
+    letter-spacing: 0.06rem;
 }
 *{
     padding: 0;
     margin: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 
@@ -14,11 +15,24 @@ html, body {
     /* height: 100vh; */
     width: 100vw;
     color: black;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+    align-items: center;
+    /* overflow-x: hidden; */
 }
 a {
     text-decoration: none;
     cursor: pointer;
     color: initial;
+    cursor: pointer;
 }
 ul {    list-style: none;
+}
+button {
+    text-decoration: none;
+    cursor: pointer;
 }

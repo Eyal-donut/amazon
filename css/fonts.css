@@ -15,3 +15,20 @@ h6 {
     line-height: 4.8rem;
     font-weight: 700;
 }
+h7 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+p {
+    color: var(--prim-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+span {
+    color: var(--link-color);
+}

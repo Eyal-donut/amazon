@@ -1,99 +1,7 @@
-.mobile.grid-container {
-    display: grid;
-    width: 100%;
-    width: 100%;
-    /* height: 100vh; */
-    grid-template-areas: 
-    'navbar1'
-    'navbar2'
-    'navbar3'
-    'product-name'
-    'reactive-gallery'
-    'color-name-yellow'
-    'order-bar'
-    'product-details'
-    'about-item'
-    'recycle'
-    'german'
-    'non-reactive-gallery'
-    'description'
-    'product-info'
-    'carousel'
-    ;
-    grid-template-rows: minmax(min-content, max-content);
-}
-
-.navbar2 {
-    grid-area: navbar2;
-    background: purple;
-    height: 50px;
-    
-}
-.navbar3 {
-    grid-area: navbar3;
-    background: #37475A;
-    height: 44px;
-
-}
-.product-name {
-    grid-area: product-name;
-    background: yellow;
-}
-.reactive-gallery {
-    grid-area: reactive-gallery;
-    background: purple;
-}
-.color-name-yellow {
-    grid-area: color-name-yellow;
-    background: yellow;
-    border-bottom: #E3E6E6 solid 0.5rem;
-    border-top: #E3E6E6 solid 0.5rem;
-}
-.order-bar {
-    grid-area: order-bar;
-    background: #999;
-    border-bottom: #E3E6E6 solid 0.5rem;
-}
-.product-details {
-    grid-area: product-details;
-    background: blue;
-    border-bottom: #E3E6E6 solid 0.5rem;
-}
-.about-item {
-    grid-area: about-item;
-    background: green;
-}
-.recycle {
-    grid-area: recycle;
-    background: #999;
-}
-.german {
-    grid-area: german;
-    background: blue;
-}
-.non-reactive-gallery {
-    grid-area: non-reactive-gallery;
-    background: purple;
-    border-bottom: #E3E6E6 solid 0.5rem;
-}
-.description {
-    grid-area: description;
-    background: green;
-    border-bottom: #E3E6E6 solid 0.5rem;
-}
-.product-info {
-    grid-area: product-info;
-    background: #999;
-}
-.carousel {
-    grid-area: carousel;
-    background: blue;
-}
-
 /* Navbar1 */
 
 .navbar1 {
-    grid-area: navbar1;
+    width: 100vw;
     background: #232F3E;
     height: 48px;
     display: flex;
@@ -175,5 +83,238 @@
         height: 25px;
     }
 
+    /* Navbar 2 */
+
+    .navbar2 {
+        width: 100vw;
+        background: #232F3E;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0.3rem 1rem;
+    }
+    
+    .container.search-bar {
+        background: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.8rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .container.search-bar form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        font-size: 1.5rem;
+
+    }
+
+    /* search input */
+    .container.search-bar input {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.8rem;
+        border: none;
+        margin-left: 1rem;
+        
+    }
+    .container.search-bar input:focus {
+        outline: none;
+        
+    }
+    
+    .magnifier-glass {
+        width: 50px;
+        height: 44px;
+        background: #EBAF63;
+        border-radius: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .magnifier-glass-logo {
+        background: url('../assets/img/sprite-mobile.png') no-repeat -11px -171px;
+        width: 15px;
+        height: 15px;
+        scale: 1.5;
+    }
+
+    /* Navbar 3 */
+    .navbar3 {
+        width: 100vw;
+        background: #37475A;
+        height: 44px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        padding: 0 1.2rem;
+    }
+
+    .location-logo {
+    background: url('../assets/img/sprite-mobile.png') no-repeat -78px -341px;
+	width: 16px;
+	height: 19px;
+    margin-right: 0.5rem;
+}
+
+ /*Main - grid */
+
+
+.mobile.grid-container {
+    display: grid;
+    width: 100%;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    'product-name'
+    'reactive-gallery'
+    'color-name-yellow'
+    'order-bar'
+    'product-details'
+    'about-item'
+    'recycle'
+    'german'
+    'non-reactive-gallery'
+    'description'
+    'product-info'
+    'carousel'
+    ;
+    grid-template-rows: minmax(min-content, max-content);
+    padding: 0 1.7rem;
+
+}
+
+
+.product-name {
+    margin-top: 1rem;
+    grid-area: product-name;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reactive-gallery {
+    grid-area: reactive-gallery;
+    /* background: purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reactive-gallery > :first-child {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.hamburger-telephone {
+    height: 39rem;
+    width: 100%;
+    max-width: 36.4rem;
+    background: url(../assets/img/hamburger-telephone.webp) no-repeat center center/cover;
+    justify-self: center;
+}
+
+.share-btn {
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url(../assets/img/share-btn.svg) no-repeat center center/cover;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.gallery-indicator {
+    position: relative;
+    width: 0.74rem;
+    height: 0.74rem;
+    border: 0.08rem solid var(--prim-color);
+    background: var(--link-color);
+    border-radius: 50%;
+    /* margin: 0 1.6rem; Doesnt work! put it in a container*/
+}
+.gallery-indicator::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 0.08rem solid var(--prim-color);
+    background: var(--link-color);
+    border-radius: 50%;
+    top: 0;
+    left: 1rem;
+}
+
+
+
 
     
+    
+
+
+
+
+
+.color-name-yellow {
+    grid-area: color-name-yellow;
+    background: yellow;
+    border-bottom: #E3E6E6 solid 0.5rem;
+    border-top: #E3E6E6 solid 0.5rem;
+}
+.order-bar {
+    grid-area: order-bar;
+    background: #999;
+    border-bottom: #E3E6E6 solid 0.5rem;
+}
+.product-details {
+    grid-area: product-details;
+    background: blue;
+    border-bottom: #E3E6E6 solid 0.5rem;
+}
+.about-item {
+    grid-area: about-item;
+    background: green;
+}
+.recycle {
+    grid-area: recycle;
+    background: #999;
+}
+.german {
+    grid-area: german;
+    background: blue;
+}
+.non-reactive-gallery {
+    grid-area: non-reactive-gallery;
+    background: purple;
+    border-bottom: #E3E6E6 solid 0.5rem;
+}
+.description {
+    grid-area: description;
+    background: green;
+    border-bottom: #E3E6E6 solid 0.5rem;
+}
+.product-info {
+    grid-area: product-info;
+    background: #999;
+}
+.carousel {
+    grid-area: carousel;
+    background: blue;
+}
+
