@@ -189,7 +189,7 @@
     'carousel'
     ;
     grid-template-rows: minmax(min-content, max-content);
-    padding: 0 1.7rem;
+    /* padding: 0 1.7rem; */
 
 }
 
@@ -200,6 +200,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 1.7rem;
 }
 
 .reactive-gallery {
@@ -209,6 +210,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 1.7rem;
 }
 
 .reactive-gallery > :first-child {
@@ -240,14 +242,16 @@
     right: 0;
 }
 
+.reactive-gallery > :nth-child(2) {
+    height: 5rem;
+}
+
 .gallery-indicator {
     position: relative;
     width: 0.74rem;
     height: 0.74rem;
     border: 0.08rem solid var(--prim-color);
-    background: var(--link-color);
     border-radius: 50%;
-    /* margin: 0 1.6rem; Doesnt work! put it in a container*/
 }
 .gallery-indicator::after {
     position: absolute;
@@ -255,33 +259,138 @@
     width: 100%;
     height: 100%;
     border: 0.08rem solid var(--prim-color);
+    border-radius: 50%;
+    top: -0.05rem;
+    left: 1.5rem;
+}
+.gallery-indicator::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 0.08rem solid var(--link-color);
     background: var(--link-color);
     border-radius: 50%;
-    top: 0;
-    left: 1rem;
+    top: -0.05rem;
+    left: -1.5rem;
 }
-
-
-
-
-    
-    
-
-
-
 
 
 .color-name-yellow {
     grid-area: color-name-yellow;
-    background: yellow;
     border-bottom: #E3E6E6 solid 0.5rem;
     border-top: #E3E6E6 solid 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.2rem 1.7rem;
 }
+
 .order-bar {
     grid-area: order-bar;
-    background: #999;
     border-bottom: #E3E6E6 solid 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.2rem 1.7rem;
+
 }
+
+.price-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.price-box h4 {
+    position: absolute;
+    top:0.17rem;
+} 
+.price-box > :first-child {
+    position: absolute;
+    top: 0.05rem;
+    left: -0.75rem;
+} 
+
+.this-item-cannot {
+    margin-bottom: 1rem;
+}
+
+.deliverto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.location-logo-black {
+    background: url('../assets/img/sprite-mobile.png') no-repeat -78px -341px;
+	width: 16px;
+	height: 19px;
+    margin-right: 0.5rem;
+    -webkit-filter: invert(100);
+}
+
+.only-left-in-stock p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    color: #007600;
+}
+
+.qty-btn {
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+.qty-btn button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 3.3rem;
+    border-radius: 1rem;
+    background: #F0F2F2;
+    border: 1px solid #C9CDCD;
+    box-shadow: rgb(0, 0, 0, 0.3) 0.05rem 0.05rem,  rgb(0, 0, 0, 0.3) -0.05rem -0.05rem;
+
+}
+.qty-btn button p {
+    color: black;;
+}
+
+.downarrow {
+    position: relative;
+    background: url('../assets/img/sprite-mobile.png') no-repeat -108px -173px;
+    width: 8px;
+    height: 14px;
+    scale: 0.8;
+    rotate: 90deg;
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
 .product-details {
     grid-area: product-details;
     background: blue;
