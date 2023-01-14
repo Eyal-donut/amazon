@@ -58,6 +58,16 @@ h11 {
     line-height: 1.4rem;
     font-weight: 400;
 }
+h12 {
+    color: #333333;
+    font-size: 1.2rem;
+    line-height: 3.3rem;
+    font-weight: 400;
+}
+
+
+
+
 
 p {
     color: var(--prim-color);
