@@ -1,0 +1,658 @@
+@media (min-width: 660px) {
+
+    .mobile-section {
+        display: none !important;
+    }
+
+    .desktop-section {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Navbar1 */
+
+    .navbar1 {
+        width: 100vw;
+        background: #131921;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 2.2rem;
+    }
+    .navbar1 > div {
+        padding: 0 1rem;
+    }
+
+    .navbar-left-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    
+    /* .container.hamburger {
+        height: 48px;
+        width: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        } */
+        
+        /* Navbar - Hamburger lines */
+        /* .container.hamburger > div {
+            position: relative;
+            height: 2px;
+            width: 20px;
+            background: #f4f4f4;
+        }
+        .container.hamburger > div:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 7px;
+            background: #f4f4f4;
+        } 
+        .container.hamburger > div:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: -7px;
+            background: #f4f4f4;
+        } */
+        
+        .amazon-logo {
+            background: url('../assets/img/sprite-mobile.png') no-repeat -11px -51px;
+            width: 78px;
+            height: 24px;
+            margin-top: 0.5rem;
+            margin-right: 0.3rem;
+        }
+
+        .location-logo {
+            background: url('../assets/img/sprite-mobile.png') no-repeat -78px -341px;
+            width: 16px;
+            height: 19px;
+            margin-right: 0.5rem;
+        }
+
+        .navbar1 > :nth-child(2) {
+            min-width: 13rem;
+        }
+
+        .container.search-bar {
+            background: #FFFFFF;
+            max-width: 70%;
+            height: 80%;
+            border-radius: 0.8rem;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            position: relative;
+        }
+        
+        .container.search-bar form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            font-size: 1.5rem;
+        }
+        
+        /* search input */
+        .container.search-bar input {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.8rem;
+            border: none;
+            margin-left: 1rem;
+            
+        }
+        .container.search-bar input:focus {
+            outline: none;
+            
+        }
+        
+        .magnifier-glass {
+            width: 50px;
+            height: 48px;
+            background: #EBAF63;
+            border-radius: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+        }
+        
+        .magnifier-glass-logo {
+            background: url('../assets/img/sprite-mobile.png') no-repeat -11px -171px;
+            width: 15px;
+            height: 15px;
+            scale: 1.5;
+        }
+        
+        .navbar-right-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: #FFFFFF;
+            margin: 0 2rem;
+        }
+
+        .container-flex-row.language {
+            height: 2rem;
+            width: 6rem;
+            justify-content: space-between;
+        }
+
+        .flag-logo {
+            width: 2.16rem;
+            height: 1.62rem;
+            background: url(./assets/img/german-flag.png) no-repeat center center/cover;
+            margin-right: 0.5rem;
+
+        }
+
+        .navbar1 > :nth-child(5) {
+            min-width: 11rem;
+        }
+        .navbar1 > :nth-child(6) {
+            min-width: 7rem;
+        }
+        .cart-logo {
+            background: url('../assets/img/sprite-mobile.png') no-repeat -11px -241px;
+            width: 35px;
+            height: 25px;
+        }
+
+        /* Navbar 2 */
+
+        .navbar2 {
+            width: var(--viewport--width--desktop);
+            background: #232F3E;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 0.3rem 1rem;
+        }
+        
+        
+
+        /* Navbar 3 */
+        .navbar3 {
+            width: var(--viewport--width--desktop);
+            background: #37475A;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            padding: 0 1.2rem;
+        }
+
+   
+
+    /*Main - grid */
+
+
+    .grid-container {
+        display: grid;
+        width: var(--viewport--width--desktop);
+        height: 100vh;
+        grid-template-areas: 
+        'product-name'
+        'reactive-gallery'
+        'color-name-yellow'
+        'order-bar'
+        'Product-details-header'
+        'product-details'
+        'about-item'
+        'recycle'
+        'german'
+        'non-reactive-gallery'
+        'description'
+        'product-info'
+        'additional-information'
+        'carousel'
+        ;
+        grid-template-rows: minmax(min-content, max-content);
+        /* padding: 0 1.7rem; */
+
+    }
+
+
+    .product-name {
+        margin-top: 1rem;
+        grid-area: product-name;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1.7rem;
+        width: var(--viewport--width--desktop);
+    }
+
+    .reactive-gallery {
+        grid-area: reactive-gallery;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1.7rem;
+        width: var(--viewport--width--desktop);
+
+    }
+
+    .reactive-gallery > :first-child {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hamburger-telephone {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/hamburger-telephone.webp) no-repeat center center/cover;
+    }
+
+    .share-btn {
+        height: 2.4rem;
+        width: 2.4rem;
+        background: url(../assets/img/share-btn.svg) no-repeat center center/cover;
+        border: 1px solid #DDDDDD;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 1.7rem;
+    }
+
+    .reactive-gallery > :nth-child(2) {
+        height: 5rem;
+    }
+
+    .gallery-indicator {
+        position: relative;
+        width: 0.74rem;
+        height: 0.74rem;
+        border: 0.08rem solid var(--prim-color);
+        border-radius: 50%;
+    }
+    .gallery-indicator::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 0.08rem solid var(--prim-color);
+        border-radius: 50%;
+        top: -0.05rem;
+        left: 1.5rem;
+    }
+    .gallery-indicator::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 0.08rem solid var(--link-color);
+        background: var(--link-color);
+        border-radius: 50%;
+        top: -0.05rem;
+        left: -1.5rem;
+    }
+
+
+    .color-name-yellow {
+        grid-area: color-name-yellow;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        border-top: #E3E6E6 solid 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: var(--viewport--width--desktop);
+        padding: 1.2rem 1.7rem;
+    }
+
+    .order-bar {
+        grid-area: order-bar;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.2rem 1.7rem;
+        width: var(--viewport--width--desktop);
+
+
+    }
+
+    .price-box {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        
+    }
+
+    .price-box h4 {
+        position: absolute;
+        top:0.17rem;
+    } 
+    .price-box > :first-child {
+        position: absolute;
+        top: 0.05rem;
+        left: -0.75rem;
+    } 
+
+    .this-item-cannot {
+        margin-bottom: 1rem;
+    }
+
+    .deliverto {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .location-logo-black {
+        background: url('../assets/img/sprite-mobile.png') no-repeat -78px -341px;
+        width: 16px;
+        height: 19px;
+        margin-right: 0.5rem;
+        -webkit-filter: invert(100);
+    }
+
+    .only-left-in-stock p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.3rem;
+        color: #007600;
+    }
+
+    .qty-btn {
+        margin-top: 0.7rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+    }
+    .qty-btn button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 9rem;
+        height: 3.3rem;
+        border-radius: 1rem;
+        background: #F0F2F2;
+        border: 1px solid #C9CDCD;
+        box-shadow: rgb(0, 0, 0, 0.03) 0.2rem 0.2rem,  rgb(0, 0, 0, 0.03) -0.2rem -0.2rem;
+
+    }
+    .qty-btn button p {
+        color: black;;
+    }
+
+    .downarrow {
+        position: relative;
+        background: url('../assets/img/sprite-mobile.png') no-repeat -108px -173px;
+        width: 8px;
+        height: 14px;
+        scale: 0.8;
+        rotate: 90deg;
+        margin-left: 1rem;
+    }
+
+    .order-bar > :nth-child(8) {
+        background: #FFA41C ;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+    }
+    .order-bar > :nth-child(7) {
+        background: #FFD814;
+        justify-content: center;
+    }
+
+    .lock-logo {
+        width: 1.1rem;
+        height: 1.5rem;
+        background: url(../assets/img/lock_logo.png) no-repeat center center/cover;
+        margin-right: 1.4rem;
+        scale:0.99;
+    }
+    .order-bar > :nth-child(9) > :nth-child(2) {
+        margin-top: 0.6rem;
+        
+    }
+    /* targeting the "dispatched from sold by */
+    .order-bar > :nth-child(10) {
+        width: var(--viewport--width--desktop);
+        justify-content: center;
+        text-align: left;
+        position: relative;
+        margin-top: 1.7rem;
+    }
+
+    #targeted {
+        width: 99vw;
+    }
+
+    .order-bar > :nth-child(10) div {
+        align-items: flex-start;
+    }
+    .order-bar > :nth-child(10) > :first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Targeting "For further informatin... */
+    .order-bar > :nth-child(11) {
+        align-items: flex-start;
+        padding: 1.5rem 0;
+        
+    }
+    .order-bar > :nth-child(11) h4 {
+        padding: .3rem 0;
+    }
+    .order-bar > :nth-child(11) div {
+        padding-top: 1.5rem;
+    }
+
+
+    .product-details-header {
+        padding: 1.7rem 1.7rem 0;
+    }
+    .product-details {
+        grid-area: product-details;
+        border-bottom: rgb(128,128,128, 0.25) 1px solid;
+        justify-content: flex-start;
+        padding: 1.7rem 1.7rem;
+        width: var(--viewport--width--desktop);
+
+        
+    }
+    .product-details :first-child{
+        margin-right: 12vw;
+    }
+
+    .product-details ul li{
+        margin-bottom: 0.6rem;
+    }
+
+    .about-item {
+        grid-area: about-item;
+        padding: 1.7rem;
+        padding-left: 2.5rem;
+        margin-bottom: 3rem;
+        width: var(--viewport--width--desktop);
+
+    }
+    .about-item ul {
+        list-style: disc;
+    }
+    .about-item li {
+        padding: 0.3rem;
+    }
+    .recycle {
+        grid-area: recycle;
+        padding: 1rem 1.7rem 1.7rem 1.7rem;
+        border-top: rgb(128,128,128, 0.25) 1px solid;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        width: var(--viewport--width--desktop);
+
+
+    }
+    .german {
+        grid-area: german;
+        padding: 1rem 1.7rem 1.2rem 1.7rem;
+        border-bottom: #E3E6E6 solid 0.5rem;
+
+    }
+    .non-reactive-gallery-header {
+        margin-bottom: 1.7rem;
+        padding: 0.5rem 1.7rem;
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+    }
+    .non-reactive-gallery-header2 {
+        margin-bottom: 4.5rem;
+
+    }
+
+    .non-reactive-gallery {
+        grid-area: non-reactive-gallery;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        padding: 0 1.7rem;
+        width: var(--viewport--width--desktop);
+
+    }
+
+    .pic-bgr {
+        height: 39rem;
+        width: 100%;
+        background: #FAFAFA;
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+
+    }
+
+    .hamburger-telephone {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/hamburger-telephone.webp) no-repeat center center/cover;
+    }
+    .pic2 {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/pic2.jpg) no-repeat center center/cover;
+    }
+    .pic3 {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/pic3.jpg) no-repeat center center/cover;
+    }
+
+    .description {
+        grid-area: description;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        padding: 1.3rem 1.7rem;
+    }
+    .product-info {
+        grid-area: product-info;
+        padding: 1.3rem 1.7rem;
+    }
+    .info-grid {
+        margin-top: 1.7rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+    .info-grid > div {
+        padding: 1.7rem 1.3rem;
+        border-top: rgb(128,128,128, 0.25) 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .info-grid > :last-child, :nth-child(13) {
+        border-bottom: rgb(128,128,128, 0.25) 1px solid;
+    }
+    .info-grid > :nth-child(odd) {
+        background: #F3F3F3;
+    }
+
+    .div1 {grid-area: 1 / 1 / 2 / 2;}
+    .div2 { grid-area: 1 / 2 / 2 / 5; }
+    .div3 { grid-area: 2 / 1 / 3 / 2; }
+    .div4 { grid-area: 2 / 2 / 3 / 5; }
+    .div5 { grid-area: 3 / 1 / 4 / 2; }
+    .div6 { grid-area: 3 / 2 / 4 / 5; }
+    .div7 { grid-area: 4 / 1 / 5 / 2; }
+    .div8 { grid-area: 4 / 2 / 5 / 5; }
+    .div9 { grid-area: 5 / 1 / 6 / 2; }
+    .div10 { grid-area: 5 / 2 / 6 / 5; }
+    .div11 { grid-area: 6 / 1 / 7 / 2; }
+    .div12 { grid-area: 6 / 2 / 7 / 5; }
+    .div13 { grid-area: 7 / 1 / 8 / 2; }
+    .div14 { grid-area: 7 / 2 / 8 / 5; }
+
+    .additional-information {
+        grid-area: additional-information;
+        padding: 0.7rem 1.7rem 1.7rem 1.7rem ;
+        border: none;
+        border-bottom: rgb(128,128,128, 0.25) 1px solid;
+
+    }
+    .additional-information h4{
+        padding-bottom: 1rem;
+    }
+
+
+
+
+
+
+
+
+}

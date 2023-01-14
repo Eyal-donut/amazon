@@ -46,6 +46,18 @@ h9 {
     line-height: 0.8rem;
     font-weight: 400;
 }
+h10 {
+    color: #CCCCCC;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+h11 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
 
 p {
     color: var(--prim-color);
