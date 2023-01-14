@@ -1,7 +1,7 @@
 /* Navbar1 */
 
 .navbar1 {
-    width: 100vw;
+    width: var(--viewport-actual-width);
     background: #232F3E;
     height: 48px;
     display: flex;
@@ -86,7 +86,7 @@
     /* Navbar 2 */
 
     .navbar2 {
-        width: 100vw;
+        width: var(--viewport-actual-width);
         background: #232F3E;
         height: 50px;
         display: flex;
@@ -149,7 +149,7 @@
 
     /* Navbar 3 */
     .navbar3 {
-        width: 100vw;
+        width: var(--viewport-actual-width);
         background: #37475A;
         height: 44px;
         display: flex;
@@ -171,8 +171,7 @@
 
 .mobile.grid-container {
     display: grid;
-    width: 100%;
-    width: 100%;
+    width: var(--viewport-actual-width);
     height: 100vh;
     grid-template-areas: 
     'product-name'
@@ -187,6 +186,7 @@
     'non-reactive-gallery'
     'description'
     'product-info'
+    'additional-information'
     'carousel'
     ;
     grid-template-rows: minmax(min-content, max-content);
@@ -202,16 +202,18 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 1.7rem;
+    width: var(--viewport-actual-width);
 }
 
 .reactive-gallery {
     grid-area: reactive-gallery;
-    /* background: purple; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 0 1.7rem;
+    width: var(--viewport-actual-width);
+
 }
 
 .reactive-gallery > :first-child {
@@ -284,6 +286,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: var(--viewport-actual-width);
     padding: 1.2rem 1.7rem;
 }
 
@@ -295,6 +298,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1.2rem 1.7rem;
+    width: var(--viewport-actual-width);
+
 
 }
 
@@ -386,9 +391,11 @@
 .order-bar > :nth-child(8) {
     background: #FFA41C ;
     margin-bottom: 1.5rem;
+    justify-content: center;
 }
 .order-bar > :nth-child(7) {
     background: #FFD814;
+    justify-content: center;
 }
 
 .lock-logo {
@@ -400,14 +407,19 @@
 }
 .order-bar > :nth-child(9) > :nth-child(2) {
     margin-top: 0.6rem;
+    
 }
 /* targeting the "dispatched from sold by */
 .order-bar > :nth-child(10) {
-    width: 100vw;
+    width: var(--viewport-actual-width);
     justify-content: center;
     text-align: left;
     position: relative;
     margin-top: 1.7rem;
+}
+
+#targeted {
+    width: 99vw;
 }
 
 .order-bar > :nth-child(10) div {
@@ -441,6 +453,8 @@
     border-bottom: rgb(128,128,128, 0.25) 1px solid;
     justify-content: flex-start;
     padding: 1.7rem 1.7rem;
+    width: var(--viewport-actual-width);
+
     
 }
 .product-details :first-child{
@@ -456,6 +470,8 @@
     padding: 1.7rem;
     padding-left: 2.5rem;
     margin-bottom: 3rem;
+    width: var(--viewport-actual-width);
+
 }
 .about-item ul {
     list-style: disc;
@@ -468,6 +484,8 @@
     padding: 1rem 1.7rem 1.7rem 1.7rem;
     border-top: rgb(128,128,128, 0.25) 1px solid;
     border-bottom: #E3E6E6 solid 0.5rem;
+    width: var(--viewport-actual-width);
+
 
 }
 .german {
@@ -497,6 +515,8 @@
     align-items: center;
     border-bottom: #E3E6E6 solid 0.5rem;
     padding: 0 1.7rem;
+    width: var(--viewport-actual-width);
+
 }
 
 .pic-bgr {
@@ -562,7 +582,6 @@
     background: #F3F3F3;
 }
 
-
 .div1 {grid-area: 1 / 1 / 2 / 2;}
 .div2 { grid-area: 1 / 2 / 2 / 5; }
 .div3 { grid-area: 2 / 1 / 3 / 2; }
@@ -578,8 +597,52 @@
 .div13 { grid-area: 7 / 1 / 8 / 2; }
 .div14 { grid-area: 7 / 2 / 8 / 5; }
 
+.additional-information {
+    grid-area: additional-information;
+    padding: 0.7rem 1.7rem 1.7rem 1.7rem ;
+    border: none;
+    border-bottom: rgb(128,128,128, 0.25) 1px solid;
+
+}
+.additional-information h4{
+    padding-bottom: 1rem;
+}
+
 .carousel {
     grid-area: carousel;
-    background: blue;
+    width: 100vh;
 }
+
+.carousel h3 {
+    padding: 2rem 1.7rem 1.7rem 1.7rem ;
+}
+
+.container.carousel-gallery-container {
+    width: 238.6rem;
+    height: 35.1rem;
+    overflow-x: auto;
+    background: #007600;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    position: relative;
+
+
+}
+.carousel-gallery-container > div {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: 35.1rem;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;background: #74ABE2;
+    justify-content: center;
+    align-items: center;
+    background: #232F3E;
+}
+.carousel-gallery-container :nth-child(2) {
+    background: yellow;
+}
+
 
