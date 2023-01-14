@@ -3,7 +3,12 @@
     src: url(/assets/amazon-ember-cufonfonts/Amazon\ Ember\ Cd\ RC.otf);
 }
 
-
+h3 {
+    color: #0F1111;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+}
 h4 {
     color: #0F1111;
     font-size: 1.5rem;
@@ -52,6 +57,9 @@ span3 {
 
 span4 {
     color: #DD0000;
+}
+span5 {
+    color: black;
 }
 
 
