@@ -1,7 +1,9 @@
 :root {
     --link-color: #007185;
     --prim-color: #565959;
-    --viewport-actual-width: 98vw;
+    --viewport--width--desktop: 98vw;
+    --viewport--width--mobile: 100vw;
+
 
       
 }      

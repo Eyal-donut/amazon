@@ -25,12 +25,14 @@ body {
 }
 a {
     text-decoration: none;
-    cursor: pointer;
-    color: initial;
+    color: var(--link-color);
     cursor: pointer;
 }
 ul {    list-style: none;
 }
+ol {    list-style: none;
+}
+
 
 button {
     text-decoration: none;

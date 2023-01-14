@@ -1,7 +1,7 @@
 /* Navbar1 */
 
 .navbar1 {
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
     background: #232F3E;
     height: 48px;
     display: flex;
@@ -86,7 +86,7 @@
     /* Navbar 2 */
 
     .navbar2 {
-        width: var(--viewport-actual-width);
+        width: var(--viewport--width--desktop);
         background: #232F3E;
         height: 50px;
         display: flex;
@@ -149,7 +149,7 @@
 
     /* Navbar 3 */
     .navbar3 {
-        width: var(--viewport-actual-width);
+        width: var(--viewport--width--desktop);
         background: #37475A;
         height: 44px;
         display: flex;
@@ -171,7 +171,7 @@
 
 .mobile.grid-container {
     display: grid;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
     height: 100vh;
     grid-template-areas: 
     'product-name'
@@ -202,7 +202,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 1.7rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 }
 
 .reactive-gallery {
@@ -212,7 +212,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 0 1.7rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
 }
 
@@ -286,7 +286,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
     padding: 1.2rem 1.7rem;
 }
 
@@ -298,7 +298,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1.2rem 1.7rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
 
 }
@@ -411,7 +411,7 @@
 }
 /* targeting the "dispatched from sold by */
 .order-bar > :nth-child(10) {
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
     justify-content: center;
     text-align: left;
     position: relative;
@@ -453,7 +453,7 @@
     border-bottom: rgb(128,128,128, 0.25) 1px solid;
     justify-content: flex-start;
     padding: 1.7rem 1.7rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
     
 }
@@ -470,7 +470,7 @@
     padding: 1.7rem;
     padding-left: 2.5rem;
     margin-bottom: 3rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
 }
 .about-item ul {
@@ -484,7 +484,7 @@
     padding: 1rem 1.7rem 1.7rem 1.7rem;
     border-top: rgb(128,128,128, 0.25) 1px solid;
     border-bottom: #E3E6E6 solid 0.5rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
 
 }
@@ -515,7 +515,7 @@
     align-items: center;
     border-bottom: #E3E6E6 solid 0.5rem;
     padding: 0 1.7rem;
-    width: var(--viewport-actual-width);
+    width: var(--viewport--width--desktop);
 
 }
 
@@ -608,41 +608,115 @@
     padding-bottom: 1rem;
 }
 
-.carousel {
-    grid-area: carousel;
-    width: 100vh;
+.section-carousel {
+    height: 40rem;
+    border-bottom: #E3E6E6 solid 0.5rem;
+
 }
 
-.carousel h3 {
-    padding: 2rem 1.7rem 1.7rem 1.7rem ;
+.section-carousel h3{
+    margin-top: 1.7rem;
+    margin-left: 1.7rem;
+    margin-bottom: 0.5rem;
+
 }
 
-.container.carousel-gallery-container {
-    width: 238.6rem;
-    height: 35.1rem;
+.carousel-container {
+    display: flex;
     overflow-x: auto;
-    background: #007600;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* Hide the scrollbar for MS Edge */
+    scrollbar-width: none; /* Hide the scrollbar for Mozilla Firefox */
+    margin: 0 auto 0 auto;
+    width: 90vw;
+    height: 36rem;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar on Webkit based browsers (Chrome, Safari, etc) */
+  -webkit-overflow-scrolling: touch; /* On touch screens the content continues to scroll for a while after finishing the scroll gesture */
+}
+
+.carousel-container ul {
+  min-width: 200px;
+  max-height: 31rem;
+  margin: 0.5rem;
+  text-align: center;
+  /* line-height: 300px; */
+  border-radius: 7px;
+}    
+
+.li-product-picture {
+    width: 20rem;
+    height: 20rem;
+}
+
+.carousel-container > :first-child > :first-child {
+    background: url(../assets/img/pic_li_1.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+
+.li-reviews {
     position: relative;
-
-
-}
-.carousel-gallery-container > div {
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    height: 35.1rem;
-    scroll-snap-align: start;
-    scroll-behavior: smooth;background: #74ABE2;
-    justify-content: center;
-    align-items: center;
-    background: #232F3E;
-}
-.carousel-gallery-container :nth-child(2) {
-    background: yellow;
+    width: 23.5rem;
+    height: 3rem;
 }
 
+.stars {
+    background: url('../assets/img/mobile_2_stars.png') no-repeat -4px -164px;
+	width: 160px;
+	height: 30px;
+    scale: 0.5;
+    position: absolute;
+    top: 0;
+    left: -3.5rem;
+}
 
+.li-rev-num {
+    width: 160px;
+	height: 30px;
+    position: absolute;
+    top: 1.3rem;
+    left: 9rem;
+}
+
+.price-box2 h3 {
+    position:relative;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1rem;
+} 
+.price-box2 h3::before {
+    content: '\20AC';
+    position: absolute;
+    top: -0.2rem;
+    left: -1rem;
+    scale: 0.7;
+}
+.carousel-container > :nth-child(2) > :first-child {
+    background: url(../assets/img/pic_li_2.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(3) > :first-child {
+    background: url(../assets/img/pic_li_3.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(4) > :first-child {
+    background: url(../assets/img/pic_li_4.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(5) > :first-child {
+    background: url(../assets/img/pic_li_5.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(6) > :first-child {
+    background: url(../assets/img/pic_li_6.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(7) > :first-child {
+    background: url(../assets/img/pic_li_7.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
+.carousel-container > :nth-child(8) > :first-child {
+    background: url(../assets/img/pic_li_8.jpg) no-repeat center center/cover;
+    margin-bottom: 1rem;
+}
