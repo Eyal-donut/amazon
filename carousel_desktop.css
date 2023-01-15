@@ -1,0 +1,11 @@
+@media (min-width: 660px) {
+
+
+.section-carousel {
+    position: absolute;
+    top:105vh;
+    height: 40rem;
+    border-bottom: #E3E6E6 solid 0.5rem;
+
+}
+}

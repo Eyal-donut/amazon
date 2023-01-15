@@ -9,6 +9,8 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        height: 100vh;
+        
     }
 
     /* Navbar1 */
@@ -215,10 +217,7 @@
     .navbar2 li:hover {
         cursor: pointer;
         border: 2px solid #FFFFFF;
-
-        
     }
-    
     .navbar3 {
         height: 3.5rem;
         width: 100vw;
@@ -250,55 +249,42 @@
         color: #EBAF63;
     }
 
-    /*Main - grid */
+    /* Main section - grid */
     
-    .grid-container {
+    .grid-container2 {
+        position: relative;
         display: grid;
-        width: var(--viewport--width--desktop);
-        height: 100vh;
-        grid-template-areas: 
-        'product-name'
-        'reactive-gallery'
-        'color-name-yellow'
-        'order-bar'
-        'Product-details-header'
-        'product-details'
-        'about-item'
-        'recycle'
-        'german'
-        'non-reactive-gallery'
-        'description'
-        'product-info'
-        'additional-information'
-        'carousel'
-        ;
-        grid-template-rows: minmax(min-content, max-content);
-        /* padding: 0 1.7rem; */
-
+        width: 100vw;
+        grid-template-areas:
+        'left left left left left left left middle middle middle middle middle aside aside aside';
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin: 0;
+        padding: 1.7rem 10rem;
     }
-
-
-    .product-name {
-        margin-top: 1rem;
-        grid-area: product-name;
+    
+    
+    .left {
+        position:relative;
+        grid-area: left;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: flex-start;
-        padding: 0 1.7rem;
-        width: var(--viewport--width--desktop);
-    }
+        margin: 0;
+        padding: 0;
 
+    }
     .reactive-gallery {
-        grid-area: reactive-gallery;
+        position:relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         padding: 0 1.7rem;
-        width: var(--viewport--width--desktop);
-
+        width: 100%;
+    
     }
-
     .reactive-gallery > :first-child {
         height: 100%;
         width: 100%;
@@ -314,9 +300,13 @@
         width: 100%;
         max-width: 36.4rem;
         background: url(../assets/img/hamburger-telephone.webp) no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 28vw;
     }
 
     .share-btn {
+        position:absolute;
         height: 2.4rem;
         width: 2.4rem;
         background: url(../assets/img/share-btn.svg) no-repeat center center/cover;
@@ -324,7 +314,7 @@
         border-radius: 50%;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 42vw;
         margin-right: 1.7rem;
     }
 
@@ -332,58 +322,94 @@
         height: 5rem;
     }
 
-    .gallery-indicator {
-        position: relative;
-        width: 0.74rem;
-        height: 0.74rem;
-        border: 0.08rem solid var(--prim-color);
-        border-radius: 50%;
-    }
-    .gallery-indicator::after {
+    .non-reactive-gallery {
+        grid-area: non-reactive-gallery;
         position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        border: 0.08rem solid var(--prim-color);
-        border-radius: 50%;
-        top: -0.05rem;
-        left: 1.5rem;
-    }
-    .gallery-indicator::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        border: 0.08rem solid var(--link-color);
-        background: var(--link-color);
-        border-radius: 50%;
-        top: -0.05rem;
-        left: -1.5rem;
-    }
-
-
-    .color-name-yellow {
-        grid-area: color-name-yellow;
-        border-bottom: #E3E6E6 solid 0.5rem;
-        border-top: #E3E6E6 solid 0.5rem;
         display: flex;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding: 0 1.7rem;
         width: var(--viewport--width--desktop);
-        padding: 1.2rem 1.7rem;
+        scale: 0.1;
+        border:none;
+        top: -2rem;
+        left: -21vw;
+
+    }
+    .non-reactive-gallery > div{
+        margin: 3rem;
     }
 
-    .order-bar {
-        grid-area: order-bar;
-        border-bottom: #E3E6E6 solid 0.5rem;
+    .pic-bgr {
+        height: 39rem;
+        width: 100%;
+        background: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hamburger-telephone2 {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/hamburger-telephone.jpg) no-repeat center center/cover;
+        border: gray 4px solid;
+        border-radius: 10px;
+    }
+    .pic2 {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/pic2.jpg) no-repeat center center/cover;
+        border: gray 4px solid;
+
+    }
+    .pic3 {
+        height: 39rem;
+        width: 100%;
+        max-width: 36.4rem;
+        background: url(../assets/img/pic3.jpg) no-repeat center center/cover;
+        border: gray 4px solid;
+    }
+
+    .grid-container3 {
+        position:absolute;
+        top:0;
+        left: 47vw;
+        display: grid;
+        grid-template-areas:
+        'product-name'
+        'price-section'
+        'color-name-yellow'
+        'product-details'
+        'about-item'
+        'recycle'
+        ;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding: 1.7rem 10rem;
+        width: 0;
+    }
+
+    .middle {
+        grid-area: middle;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 1.2rem 1.7rem;
-        width: var(--viewport--width--desktop);
+        justify-content: flex-start;
+        
+    }
 
-
+    .product-name {
+        margin-top: 1rem;
+        grid-area: product-name;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1.7rem;
+        width: 30rem;
     }
 
     .price-box {
@@ -395,6 +421,7 @@
         margin-left: 0.75rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        width: 30rem;
         
     }
 
@@ -407,7 +434,85 @@
         top: 0.05rem;
         left: -0.75rem;
     } 
+    .prices-for-items{
+        width: 30rem;
+    }
 
+    .color-name-yellow {
+        grid-area: color-name-yellow;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        border-top: #E3E6E6 solid 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30rem;
+        padding: 1.2rem 1.7rem;
+    }
+    .product-details-header {
+        padding: 1.7rem 1.7rem 0;
+    }
+    .product-details {
+        grid-area: product-details;
+        border-bottom: rgb(128,128,128, 0.25) 1px solid;
+        justify-content: flex-start;
+        padding: 1.7rem 1.7rem;
+        width: 30rem;
+
+        
+    }
+    .product-details :first-child{
+        margin-right: 2.5vw;
+    }
+
+    .product-details ul li{
+        margin-bottom: 0.6rem;
+    }
+
+    .about-item {
+        grid-area: about-item;
+        padding: 1.7rem;
+        padding-left: 2.5rem;
+        margin-bottom: 3rem;
+        width: 30rem;
+
+    }
+    .about-item ul {
+        list-style: disc;
+    }
+    .about-item li {
+        padding: 0.3rem;
+    }
+    .recycle {
+        grid-area: recycle;
+        padding: 1rem 1.7rem 1.7rem 1.7rem;
+        border-top: rgb(128,128,128, 0.25) 1px solid;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        width: 30rem;
+    }
+
+    .aside {
+        grid-area: aside;
+        width: 25rem;
+    }
+
+    .order-bar {
+        position:absolute;
+        top:3rem;
+        left:69vw;
+        grid-area: order-bar;
+        border-bottom: #E3E6E6 solid 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1.2rem 1.7rem;
+        width: 25rem;
+        border: rgb(128,128,128, 0.25) 3px solid;
+        border-radius: 1rem;
+
+    }
+
+    
     .this-item-cannot {
         margin-bottom: 1rem;
     }
@@ -494,7 +599,7 @@
     }
     /* targeting the "dispatched from sold by */
     .order-bar > :nth-child(10) {
-        width: var(--viewport--width--desktop);
+        width: 25rem;
         justify-content: center;
         text-align: left;
         position: relative;
@@ -502,8 +607,9 @@
     }
 
     #targeted {
-        width: 99vw;
+        width: 25rem;
     }
+    
 
     .order-bar > :nth-child(10) div {
         align-items: flex-start;
@@ -518,117 +624,16 @@
     .order-bar > :nth-child(11) {
         align-items: flex-start;
         padding: 1.5rem 0;
+        width: 25rem;
         
     }
     .order-bar > :nth-child(11) h4 {
         padding: .3rem 0;
+        width: 25rem;
     }
     .order-bar > :nth-child(11) div {
         padding-top: 1.5rem;
-    }
-
-
-    .product-details-header {
-        padding: 1.7rem 1.7rem 0;
-    }
-    .product-details {
-        grid-area: product-details;
-        border-bottom: rgb(128,128,128, 0.25) 1px solid;
-        justify-content: flex-start;
-        padding: 1.7rem 1.7rem;
-        width: var(--viewport--width--desktop);
-
-        
-    }
-    .product-details :first-child{
-        margin-right: 12vw;
-    }
-
-    .product-details ul li{
-        margin-bottom: 0.6rem;
-    }
-
-    .about-item {
-        grid-area: about-item;
-        padding: 1.7rem;
-        padding-left: 2.5rem;
-        margin-bottom: 3rem;
-        width: var(--viewport--width--desktop);
-
-    }
-    .about-item ul {
-        list-style: disc;
-    }
-    .about-item li {
-        padding: 0.3rem;
-    }
-    .recycle {
-        grid-area: recycle;
-        padding: 1rem 1.7rem 1.7rem 1.7rem;
-        border-top: rgb(128,128,128, 0.25) 1px solid;
-        border-bottom: #E3E6E6 solid 0.5rem;
-        width: var(--viewport--width--desktop);
-
-
-    }
-    .german {
-        grid-area: german;
-        padding: 1rem 1.7rem 1.2rem 1.7rem;
-        border-bottom: #E3E6E6 solid 0.5rem;
-
-    }
-    .non-reactive-gallery-header {
-        margin-bottom: 1.7rem;
-        padding: 0.5rem 1.7rem;
-        position: absolute;
-        top: 0.5rem;
-        left: 0;
-    }
-    .non-reactive-gallery-header2 {
-        margin-bottom: 4.5rem;
-
-    }
-
-    .non-reactive-gallery {
-        grid-area: non-reactive-gallery;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        border-bottom: #E3E6E6 solid 0.5rem;
-        padding: 0 1.7rem;
-        width: var(--viewport--width--desktop);
-
-    }
-
-    .pic-bgr {
-        height: 39rem;
-        width: 100%;
-        background: #FAFAFA;
-        display: flex;
-        justify-content: center;
-        margin: 1rem 0;
-
-    }
-
-    .hamburger-telephone {
-        height: 39rem;
-        width: 100%;
-        max-width: 36.4rem;
-        background: url(../assets/img/hamburger-telephone.webp) no-repeat center center/cover;
-    }
-    .pic2 {
-        height: 39rem;
-        width: 100%;
-        max-width: 36.4rem;
-        background: url(../assets/img/pic2.jpg) no-repeat center center/cover;
-    }
-    .pic3 {
-        height: 39rem;
-        width: 100%;
-        max-width: 36.4rem;
-        background: url(../assets/img/pic3.jpg) no-repeat center center/cover;
+        width:25rem;
     }
 
     .description {
@@ -636,50 +641,7 @@
         border-bottom: #E3E6E6 solid 0.5rem;
         padding: 1.3rem 1.7rem;
     }
-    .product-info {
-        grid-area: product-info;
-        padding: 1.3rem 1.7rem;
-    }
-    .info-grid {
-        margin-top: 1.7rem;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 2rem;
-    }
-    .info-grid > div {
-        padding: 1.7rem 1.3rem;
-        border-top: rgb(128,128,128, 0.25) 1px solid;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .info-grid > :last-child, :nth-child(13) {
-        border-bottom: rgb(128,128,128, 0.25) 1px solid;
-    }
-    .info-grid > :nth-child(odd) {
-        background: #F3F3F3;
-    }
-
-    .div1 {grid-area: 1 / 1 / 2 / 2;}
-    .div2 { grid-area: 1 / 2 / 2 / 5; }
-    .div3 { grid-area: 2 / 1 / 3 / 2; }
-    .div4 { grid-area: 2 / 2 / 3 / 5; }
-    .div5 { grid-area: 3 / 1 / 4 / 2; }
-    .div6 { grid-area: 3 / 2 / 4 / 5; }
-    .div7 { grid-area: 4 / 1 / 5 / 2; }
-    .div8 { grid-area: 4 / 2 / 5 / 5; }
-    .div9 { grid-area: 5 / 1 / 6 / 2; }
-    .div10 { grid-area: 5 / 2 / 6 / 5; }
-    .div11 { grid-area: 6 / 1 / 7 / 2; }
-    .div12 { grid-area: 6 / 2 / 7 / 5; }
-    .div13 { grid-area: 7 / 1 / 8 / 2; }
-    .div14 { grid-area: 7 / 2 / 8 / 5; }
-
+    
     .additional-information {
         grid-area: additional-information;
         padding: 0.7rem 1.7rem 1.7rem 1.7rem ;
